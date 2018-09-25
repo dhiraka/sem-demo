@@ -154,7 +154,7 @@ contract SEM_DAO_DEMO is owned, SEM_mintable {
         
         numProposals = SafeMath.add(proposalID,1);
         
-        //mint 100 SEM tokens
+        //mint SEM tokens, number is based on proposal fee amount
         numberOfTokensToMintPerNewProposal = SafeMath.mul(proposalFee, 10);
         mint (owner, numberOfTokensToMintPerNewProposal);
         
